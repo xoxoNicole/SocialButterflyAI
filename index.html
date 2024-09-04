@@ -7,6 +7,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <meta name="description" content="Social Butterfly AI: Your AI-powered content strategist and business advisor. Revolutionize your digital marketing with AI-driven insights and content creation.">
     <meta name="keywords" content="AI, content strategy, business advisor, digital marketing, social media">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://socialbutterfly-ai.co">
     <style>
         @keyframes glow {
             /* Delete this entire keyframe */
@@ -64,16 +67,75 @@
             position: absolute;
             width: 30px;
             height: 30px;
-            background: linear-gradient(45deg, #ff69b4, #ff1493);
-            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
             opacity: 0.7;
-            filter: blur(1px);
         }
+
+        .butterfly::before,
+        .butterfly::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 15px;
+            height: 20px;
+            border-radius: 50% 50% 0 0;
+            box-shadow: 0 0 10px currentColor, inset 0 0 5px currentColor;
+        }
+
+        .butterfly::before {
+            left: 0;
+            transform-origin: right bottom;
+            animation: leftWing 0.2s ease-in-out infinite alternate;
+        }
+
+        .butterfly::after {
+            right: 0;
+            transform-origin: left bottom;
+            animation: rightWing 0.2s ease-in-out infinite alternate;
+        }
+
+        .butterfly-body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: currentColor;
+            transform: translate(-50%, -50%);
+        }
+
+        .butterfly-antenna {
+            position: absolute;
+            top: -5px;
+            width: 1px;
+            height: 8px;
+            background-color: currentColor;
+        }
+
+        .butterfly-antenna.left {
+            left: 40%;
+            transform: rotate(-30deg);
+        }
+
+        .butterfly-antenna.right {
+            right: 40%;
+            transform: rotate(30deg);
+        }
+
+        @keyframes leftWing {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(60deg); }
+        }
+
+        @keyframes rightWing {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(-60deg); }
+        }
+
         @keyframes flutter {
-            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
-            25% { transform: translateY(-20px) rotate(-15deg) scale(1.1); }
-            50% { transform: translateY(-40px) rotate(15deg) scale(0.9); }
-            75% { transform: translateY(-20px) rotate(-5deg) scale(1.05); }
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(-5deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+            75% { transform: translateY(-15px) rotate(-3deg); }
         }
 
         :root {
@@ -280,6 +342,28 @@
         function createButterfly() {
             const butterfly = document.createElement('div');
             butterfly.classList.add('butterfly');
+
+            const body = document.createElement('div');
+            body.classList.add('butterfly-body');
+
+            const leftAntenna = document.createElement('div');
+            leftAntenna.classList.add('butterfly-antenna', 'left');
+
+            const rightAntenna = document.createElement('div');
+            rightAntenna.classList.add('butterfly-antenna', 'right');
+
+            butterfly.appendChild(body);
+            butterfly.appendChild(leftAntenna);
+            butterfly.appendChild(rightAntenna);
+
+            // Random color
+            const colors = ['#ff69b4', '#ff1493', '#00ffff', '#ff00ff', '#ffa500'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            butterfly.style.color = randomColor;
+
+            // Outline effect
+            butterfly.style.filter = `drop-shadow(0 0 2px ${randomColor})`;
+
             butterfly.style.left = Math.random() * window.innerWidth + 'px';
             butterfly.style.top = Math.random() * window.innerHeight + 'px';
             butterfly.style.animation = `flutter ${5 + Math.random() * 10}s infinite`;
@@ -357,6 +441,15 @@
             var parallax = document.querySelector('.parallax');
             parallax.style.backgroundPositionY = -(scrolled * 0.5) + 'px';
         });
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA4-ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'YOUR-GA4-ID');
     </script>
 </body>
 </html>
