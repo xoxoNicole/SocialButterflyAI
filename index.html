@@ -1,34 +1,362 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #9ba2b1; -webkit-text-stroke: #9ba2b1}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #d65562; -webkit-text-stroke: #d65562}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #88b966; -webkit-text-stroke: #88b966}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; color: #d65562; -webkit-text-stroke: 0px #d65562}
-    span.s3 {font-kerning: none; color: #c58853; -webkit-text-stroke: 0px #c58853}
-    span.s4 {font-kerning: none; color: #88b966; -webkit-text-stroke: 0px #88b966}
-    span.s5 {font-kerning: none; color: #9ba2b1; -webkit-text-stroke: 0px #9ba2b1}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Butterfly AI - Your AI-Powered Content Strategist and Business Advisor</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <meta name="description" content="Social Butterfly AI: Your AI-powered content strategist and business advisor. Revolutionize your digital marketing with AI-driven insights and content creation.">
+    <meta name="keywords" content="AI, content strategy, business advisor, digital marketing, social media">
+    <style>
+        @keyframes glow {
+            /* Delete this entire keyframe */
+        }
+        .glow-effect {
+            /* Remove this class or change its properties */
+            animation: none;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-shape-divider-bottom-1685123664 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .custom-shape-divider-bottom-1685123664 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        .custom-shape-divider-bottom-1685123664 .shape-fill {
+            fill: #FF69B4;
+        }
+        .cta-button {
+            background-color: black;
+            color: white;
+            border: 2px solid #ff69b4;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #ff69b4;
+            color: black;
+        }
+        .feature-card {
+            background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+            border: 1px solid #ff69b4;
+        }
+        #butterfly-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .butterfly {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            opacity: 0.7;
+            filter: blur(1px);
+        }
+        @keyframes flutter {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            25% { transform: translateY(-20px) rotate(-15deg) scale(1.1); }
+            50% { transform: translateY(-40px) rotate(15deg) scale(0.9); }
+            75% { transform: translateY(-20px) rotate(-5deg) scale(1.05); }
+        }
+
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #ff1493;
+            --bg-color: #000;
+            --text-color: #fff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .futuristic-container {
+            background: linear-gradient(45deg, rgba(255, 105, 180, 0.1), rgba(255, 20, 147, 0.1));
+            border: 1px solid var(--primary-color);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .neon-text {
+            color: var(--primary-color);
+        }
+
+        .neon-border {
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 10px var(--primary-color), inset 0 0 10px var(--primary-color);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .hover-glow:hover {
+            box-shadow: none;
+            transition: background-color 0.3s ease-in-out;
+            background-color: var(--secondary-color);
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;</span><span class="s2">html </span><span class="s3">lang</span><span class="s1">="</span><span class="s4">en</span><span class="s1">"&gt;</span></p>
-<p class="p2"><span class="s5">&lt;</span><span class="s1">head</span><span class="s5">&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">meta </span><span class="s3">charset</span><span class="s1">="</span><span class="s4">UTF-8</span><span class="s1">"&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">meta </span><span class="s3">name</span><span class="s5">="</span><span class="s1">viewport</span><span class="s5">"</span><span class="s2"> </span><span class="s3">content</span><span class="s5">="</span><span class="s1">width=device-width, initial-scale=1.0</span><span class="s5">"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">title</span><span class="s1">&gt;Test Page&lt;/</span><span class="s2">title</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s5">&lt;/</span><span class="s1">head</span><span class="s5">&gt;</span></p>
-<p class="p2"><span class="s5">&lt;</span><span class="s1">body</span><span class="s5">&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">h1</span><span class="s1">&gt;Hello, World!&lt;/</span><span class="s2">h1</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s2">p</span><span class="s1">&gt;This is a test page for Social Butterfly AI.&lt;/</span><span class="s2">p</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s5">&lt;/</span><span class="s1">body</span><span class="s5">&gt;</span></p>
-<p class="p2"><span class="s5">&lt;/</span><span class="s1">html</span><span class="s5">&gt;</span></p>
+<body class="bg-black text-white">
+    <div id="butterfly-container"></div>
+
+    <nav class="bg-gray-900 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">Social Butterfly AI</a>
+            <div>
+                <a href="#features" class="mx-2 hover:text-pink-400">Features</a>
+                <a href="#demo" class="mx-2 hover:text-pink-400">Demo</a>
+                <a href="#pricing" class="mx-2 hover:text-pink-400">Pricing</a>
+                <a href="#contact" class="mx-2 hover:text-pink-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen flex items-center justify-center text-center px-4 parallax" style="background-image: url('path/to/your/background-image.jpg');">
+        <div class="futuristic-container p-8">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 text-white">Social Butterfly AI</h1>
+            <p class="text-xl md:text-2xl mb-4">Your AI-Powered Content Strategist and Business Advisor</p>
+            <p class="text-lg md:text-xl mb-8">Revolutionize Your Content Strategy with AI-Driven Insights</p>
+            <a href="#" class="gradient-bg px-8 py-3 rounded-full text-lg font-semibold transition duration-300 hover-glow">Get Started</a>
+        </div>
+        <div class="custom-shape-divider-bottom-1685123664">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <section id="features" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center text-white">Revolutionize Your Content Strategy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="futuristic-container p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">AI-Driven Content Creation</h3>
+                    <p>Generate high-quality, tailored content across multiple platforms in seconds. Our AI understands your brand voice and audience, ensuring each piece resonates.</p>
+                    <ul class="mt-4 list-disc list-inside">
+                        <li>Customized content for each platform</li>
+                        <li>SEO-optimized writing</li>
+                        <li>Engagement-focused storytelling</li>
+                    </ul>
+                </div>
+                <div class="futuristic-container p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Intelligent Business Insights</h3>
+                    <p>Gain strategic advantage with AI-powered market analysis, trend forecasting, and performance optimization recommendations.</p>
+                </div>
+                <div class="futuristic-container p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Scalable Efficiency</h3>
+                    <p>Automate time-consuming tasks and manage your entire content lifecycle, from ideation to analytics, allowing you to focus on growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-20 px-4 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center text-white">Your AI Business Advisor in Action</h2>
+            <div class="futuristic-container p-4 rounded-lg shadow-lg border border-pink-500">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2 p-4">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">AI Chat</h3>
+                        <div class="bg-gray-800 p-4 rounded-lg h-64 overflow-y-auto" id="chatArea">
+                            <!-- Chat messages will be added here dynamically -->
+                        </div>
+                        <div class="mt-4 flex">
+                            <input type="text" id="userInput" placeholder="Ask about business strategy, content ideas, or market trends..." class="flex-grow p-2 rounded-l-lg bg-gray-700 text-white">
+                            <button onclick="sendMessage()" class="gradient-bg text-white px-4 py-2 rounded-r-lg hover:bg-pink-600">Send</button>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-4">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Content Calendar</h3>
+                        <div class="bg-gray-800 p-4 rounded-lg h-64 overflow-y-auto" id="calendarArea">
+                            <!-- Calendar content will be added here dynamically -->
+                        </div>
+                        <button onclick="generateContentIdea()" class="mt-4 gradient-bg text-white px-4 py-2 rounded-lg hover:bg-pink-600">Generate Content Idea</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-white">Our Vision</h2>
+            <p class="text-lg mb-8">Social Butterfly AI is evolving the digital landscape. We're not just creating content; we're building the future of AI-assisted business strategy. From advanced social listening to potential robotic content capture, we're pushing the boundaries of what's possible in digital marketing and business intelligence.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="futuristic-container p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Current Traction</h3>
+                    <ul class="text-left list-disc list-inside">
+                        <li>Over 100,000 interactions via the GPT Store</li>
+                        <li>4.2-star user rating</li>
+                        <li>Strategic partnership with Florida A&M University</li>
+                    </ul>
+                </div>
+                <div class="futuristic-container p-6 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Future Innovations</h3>
+                    <ul class="text-left list-disc list-inside">
+                        <li>Advanced social listening capabilities</li>
+                        <li>AI-driven content performance analytics</li>
+                        <li>Robotic integration for hands-free content capture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center text-white">Pricing</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="futuristic-container p-6 rounded-lg text-center">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Starter</h3>
+                    <p class="text-4xl font-bold mb-4">$29<span class="text-xl font-normal">/mo</span></p>
+                    <ul class="mb-6">
+                        <li>1 Social Account</li>
+                        <li>100 AI-generated posts/mo</li>
+                        <li>Basic Analytics</li>
+                    </ul>
+                    <a href="#" class="gradient-bg px-6 py-2 rounded-full inline-block transition duration-300">Choose Plan</a>
+                </div>
+                <div class="futuristic-container p-6 rounded-lg text-center transform scale-105 shadow-xl">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Pro</h3>
+                    <p class="text-4xl font-bold mb-4">$79<span class="text-xl font-normal">/mo</span></p>
+                    <ul class="mb-6">
+                        <li>5 Social Accounts</li>
+                        <li>500 AI-generated posts/mo</li>
+                        <li>Advanced Analytics</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#" class="gradient-bg px-6 py-2 rounded-full inline-block transition duration-300">Choose Plan</a>
+                </div>
+                <div class="futuristic-container p-6 rounded-lg text-center">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Enterprise</h3>
+                    <p class="text-4xl font-bold mb-4">Custom</p>
+                    <ul class="mb-6">
+                        <li>Unlimited Social Accounts</li>
+                        <li>Unlimited AI-generated posts</li>
+                        <li>Custom Integrations</li>
+                        <li>Dedicated Support</li>
+                    </ul>
+                    <a href="#" class="gradient-bg px-6 py-2 rounded-full inline-block transition duration-300">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 py-8 px-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Social Butterfly AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function createButterfly() {
+            const butterfly = document.createElement('div');
+            butterfly.classList.add('butterfly');
+            butterfly.style.left = Math.random() * window.innerWidth + 'px';
+            butterfly.style.top = Math.random() * window.innerHeight + 'px';
+            butterfly.style.animation = `flutter ${5 + Math.random() * 10}s infinite`;
+            document.getElementById('butterfly-container').appendChild(butterfly);
+
+            // Remove butterfly after animation
+            setTimeout(() => {
+                butterfly.remove();
+            }, 15000);
+        }
+
+        function initializeButterflies() {
+            setInterval(createButterfly, 2000); // Create a new butterfly every 2 seconds
+        }
+
+        // Run the butterfly creation after the page loads
+        window.addEventListener('load', initializeButterflies);
+
+        async function sendMessage() {
+            var input = document.getElementById('userInput');
+            if (input.value.trim() !== '') {
+                addMessage('user', input.value);
+
+                // Simulate AI response
+                const aiResponse = simulateAIResponse(input.value);
+                setTimeout(() => {
+                    addMessage('ai', aiResponse);
+                }, 1000); // Simulate a delay
+
+                input.value = '';
+            }
+        }
+
+        function simulateAIResponse(userInput) {
+            // Simple response simulation based on user input
+            const responses = [
+                "That's an interesting point about social media strategy.",
+                "Have you considered using AI-driven analytics for your content?",
+                "Engagement is key in today's digital landscape.",
+                "Creating a consistent brand voice across platforms is crucial.",
+                "Let's explore some innovative content ideas for your business.",
+            ];
+            return responses[Math.floor(Math.random() * responses.length)];
+        }
+
+        function addMessage(sender, text) {
+            var chatArea = document.getElementById('chatArea');
+            var messageDiv = document.createElement('div');
+            messageDiv.className = 'mb-2 ' + (sender === 'user' ? 'text-right' : 'text-left');
+            messageDiv.innerHTML = '<span class="inline-block bg-' + (sender === 'user' ? 'pink' : 'gray') + '-600 rounded px-2 py-1">' + text + '</span>';
+            chatArea.appendChild(messageDiv);
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+        function generateContentIdea() {
+            // Simulate content idea generation
+            addContentIdea('Here\'s a simulated content idea: "10 Ways to Boost Your Social Media Presence"');
+        }
+
+        function addContentIdea(idea) {
+            var calendarArea = document.getElementById('calendarArea');
+            var ideaDiv = document.createElement('div');
+            ideaDiv.className = 'mb-2 p-2 bg-gray-700 rounded';
+            ideaDiv.textContent = idea;
+            calendarArea.appendChild(ideaDiv);
+            calendarArea.scrollTop = calendarArea.scrollHeight;
+        }
+
+        document.querySelector('button[onclick="sendMessage()"]').addEventListener('click', sendMessage);
+        document.querySelector('button[onclick="generateContentIdea()"]').addEventListener('click', generateContentIdea);
+
+        // Parallax effect
+        window.addEventListener('scroll', function() {
+            var scrolled = window.pageYOffset;
+            var parallax = document.querySelector('.parallax');
+            parallax.style.backgroundPositionY = -(scrolled * 0.5) + 'px';
+        });
+    </script>
 </body>
 </html>
